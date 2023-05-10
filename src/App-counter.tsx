@@ -17,9 +17,6 @@ const initialState = {count: 0, op: ''};
 
 const App = ()  => {
 
-  function MyFun() {
-    alert('Blood Range');
-  }
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -43,8 +40,14 @@ const App = ()  => {
       <button onClick={() => dispatch({type: 'increment'})}>+</button>
    <br>
    </br>
-      <input type="Name" placeholder="Enter your Diseases Name"/>
-      <button onClick = {MyFun}>submit</button>
+   <h1>Date Check Up</h1>
+   <br></br>
+      <input type="date" /> Last Month
+
+
+      <br></br>
+      <input type="date"/> Current Month
+
     </> 
   </div>
   );
