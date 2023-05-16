@@ -1,25 +1,19 @@
-import React, {useState} from 'react'
+import { useContext ,useState } from 'react';
+import './App.css';
+import ShowHealthData from './Component/ShowHealthData/ShowHealthData';
+import HealthDataContext, { HealthDataContextWrapper } from './context/health-data-context';
+import EditHealthData from './Component/EditHealthData/EditHealthData';
+import { EDIT, VIEW } from './store/store-types';
+import MainComponent from './Component/Maincomponent/MainComponent';
 
+function App() {
+   
 
-function StringType() {
+     return (
+          <HealthDataContextWrapper>
+               <MainComponent/>
+          </HealthDataContextWrapper>
+     );
+}
 
-const [details, setdetails] = useState("College Id")
-const [name,setname ] = useState("Pallavi")
-
-function updateDetails() 
-  {
-    setdetails("23445567789007764")  
-  }
-    return (
-    <div className="App1">
-     {details}
-     <br/> 
-     <button  onClick={updateDetails}>
-      Click Here To check Id
-     </button>
-      <br></br>
-    </div>
-    )
-  }
-
-  export default StringType;
+  export default App;
