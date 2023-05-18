@@ -1,13 +1,15 @@
 import TableComp from "../TableComp/TableComp";
 
+
 const ShowHealthData = () => {
-      
-    return (
+
+    return(
         <>
-        <h1>Show Health Data </h1>
+        <h1>Show Health Data</h1>
         <TableComp/>
         </>
-    )
+    )   
 };
+
 
 export default ShowHealthData;

@@ -1,19 +1,50 @@
-import { useContext ,useState } from 'react';
 import './App.css';
+import  { HealthDataContextWrapper } from './context/health-data-context';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import RootComp from './RootComp/RootComp';
+import HomePage from './Component/HomePage/HomePage';
 import ShowHealthData from './Component/ShowHealthData/ShowHealthData';
-import HealthDataContext, { HealthDataContextWrapper } from './context/health-data-context';
 import EditHealthData from './Component/EditHealthData/EditHealthData';
-import { EDIT, VIEW } from './store/store-types';
-import MainComponent from './Component/Maincomponent/MainComponent';
+import ViewHealthData from './Component/ViewHealthData/ViewHealthData';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootComp />,
+    children: [
+      {
+        path: '/',
+        element: <HomePage />
+      },
+      {
+        path: '/show',
+        element: <ShowHealthData />
+      },
+      {
+        path: '/edit',
+        element: <EditHealthData />
+      },
+      {
+        path: '/view',
+        element: <ViewHealthData />
+      }
+    ]
+  }
+  
+]);
+
 
 function App() {
-   
 
-     return (
-          <HealthDataContextWrapper>
-               <MainComponent/>
-          </HealthDataContextWrapper>
-     );
+
+  return (
+    <HealthDataContextWrapper>
+    
+       <RouterProvider router={router} />
+
+    </HealthDataContextWrapper>
+
+  );
 }
 
-  export default App;
+export default App;
