@@ -9,31 +9,33 @@ import { TABLE, VIEW_MODE, stateType } from "../store/store-types";
 
 const HealthDataContext = createContext({
     users: initalState,
-    dispatchFun: (action: any) =>{}
+    dispatchFun: (action: any) => {
+
+    }
 })
 
 
-export const HealthDataContextWrapper: React.FC<any> = (props) => {
+export const HealthDataContextWrapper:React.FC<any> = (props) => {
 
-    const [userState, dispatch] = useReducer(reducerFunction, initalStateValue)
-    const [currentPageState, setCurrentPageState] = useState<VIEW_MODE>(TABLE)
+    const [userState,dispatch] = useReducer(reducerFunction , initalStateValue)
+    
+    const dispatchFun = (action: any) => {
+        dispatch(action) 
+    } 
 
-     const dispatchFun = (action: any) => {
-        dispatch(action)
-     }
-    const { children } = props;
+    const { children } = props
     return (
         <HealthDataContext.Provider value={
-            {
-                users: userState,
-                dispatchFun: dispatchFun
+           {
+             users:userState,
+             dispatchFun: dispatchFun
             }
         }>
-            <div className={styless["container-main"]}>
-                {children}
-            </div>
+        <div className={styless["container-main"]}>
+            {children}
+        </div>
         </HealthDataContext.Provider>
-
+      
     )
 }
 

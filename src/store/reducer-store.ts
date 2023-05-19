@@ -49,8 +49,6 @@ const reducerFunction = (state = initalState, action: any) => {
         
         return  [...state];
                 
-            
-
         default:
             return state;
     }

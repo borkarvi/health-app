@@ -1,5 +1,5 @@
-import TableComp from "../TableComp/TableComp";
 
+import TableComp from "../TableComp/TableComp";
 
 const ShowHealthData = () => {
 
