@@ -31,9 +31,9 @@ const router = createBrowserRouter([
         element: <ViewHealthData />
       },
       {
-        path: '/Logs',
-        element: 'Logs'
-      }
+      path: '/Logs',
+      element: 'Logs HealthData'
+    }
     ]
   }
   

@@ -8,9 +8,8 @@ setTimeout(() => {
 }, 1000);
   return (
       <div>
-      <ShowHealthData/>
-  
-      </div>
+        <ShowHealthData/>
+       </div>
   )
 };
 
