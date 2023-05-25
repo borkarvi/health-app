@@ -3,9 +3,11 @@ import  { HealthDataContextWrapper } from './context/health-data-context';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import RootComp from './RootComp/RootComp';
 import HomePage from './Component/HomePage/HomePage';
-import ShowHealthData from './Component/ShowHealthData/ShowHealthData';
 import EditHealthData from './Component/EditHealthData/EditHealthData';
 import ViewHealthData from './Component/ViewHealthData/ViewHealthData';
+import ShowHealthData from './Component/ShowHealthData/ShowHealthData';
+import empLog from './empLog/EmpLog';
+
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/view/:userId',
         element: <ViewHealthData />
+      },
+      {
+        path: '/Logs',
+        element: 'Logs'
       }
     ]
   }

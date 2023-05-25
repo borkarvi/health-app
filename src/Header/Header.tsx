@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Header.scss'
 const Header = () => {
-    const navArr = [
+    const navArr: any = [
         {
             path: '',
             name: 'home'
@@ -9,7 +9,11 @@ const Header = () => {
         {
             path: '/show',
             name: 'ALL User'
-        }
+        },
+        {
+            path: '/Logs',
+            name: 'Logs'
+          }
 
     ];
 

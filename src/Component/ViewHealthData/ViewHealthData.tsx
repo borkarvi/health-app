@@ -36,7 +36,12 @@ const ViewHealthData = () => {
                      &&
              (userData.DBP.value > 80 && userData.DBP.value <89)){
             setBPResult('HIGH BP')
-         }
+         }else if(
+            (userData.SBP.value > 130 &&userData.SBP.value  <139 ) 
+                    &&
+            (userData.DBP.value > 80 && userData.DBP.value <89)){
+           setBPResult('Low BP')
+        }
         }
      useEffect(() => {
         checkBP()
