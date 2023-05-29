@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 const RootComp = () => {
   return (
     <>
-        <h1> Root Comp</h1>
+        <h1>USER TABLE</h1>
 
         <Header/>
 

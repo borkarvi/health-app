@@ -6,7 +6,7 @@ import HomePage from './Component/HomePage/HomePage';
 import EditHealthData from './Component/EditHealthData/EditHealthData';
 import ViewHealthData from './Component/ViewHealthData/ViewHealthData';
 import ShowHealthData from './Component/ShowHealthData/ShowHealthData';
-import empLog from './empLog/EmpLog';
+import EmpLog from './Component/empLog/EmpLog';
 
 
 const router = createBrowserRouter([
@@ -31,10 +31,10 @@ const router = createBrowserRouter([
         element: <ViewHealthData />
       },
       {
-      path: '/Logs',
-      element: 'Logs HealthData'
-    }
-    ]
+        path: '/Logs',
+        element: 'Logs HealthData'
+      }
+     ]
   }
   
 ]);

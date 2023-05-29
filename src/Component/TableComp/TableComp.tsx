@@ -5,7 +5,7 @@ import { stateType } from "../../store/store-types";
 import { useNavigate } from "react-router-dom";
 const TableComp = () => {
 
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
     const {users} = useContext(HealthDataContext);
     

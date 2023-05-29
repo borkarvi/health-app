@@ -3,18 +3,12 @@ import styless from './HealthData.module.scss';
 import reducerFunction, { initalState, initalStateValue } from "../store/reducer-store";
 import { TABLE, VIEW_MODE, stateType } from "../store/store-types";
 
-
-
-
-
 const HealthDataContext = createContext({
     users: initalState,
     dispatchFun: (action: any) => {
 
     }
 })
-
-
 export const HealthDataContextWrapper:React.FC<any> = (props) => {
 
     const [userState,dispatch] = useReducer(reducerFunction , initalStateValue)
@@ -38,8 +32,4 @@ export const HealthDataContextWrapper:React.FC<any> = (props) => {
       
     )
 }
-
-
-
-
 export default HealthDataContext;
